@@ -29,4 +29,8 @@ public class ElevatorSystem {
         return this.numofElevators;
     }
 
+    public boolean handleExternalRequest(ExternalRequest r) {
+
+    }
+
 }
