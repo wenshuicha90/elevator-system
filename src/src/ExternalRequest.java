@@ -14,5 +14,5 @@ public class ExternalRequest extends Request{
     public Direction getDirection() {
         return direction;
     }
-    
+
 }
