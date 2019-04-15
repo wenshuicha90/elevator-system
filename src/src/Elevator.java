@@ -42,18 +42,63 @@ public class Elevator {
 
     }
 
+
+    // check if request is valid
+    // if valid: add request to stoplist depending on the current level, the request level and status.
     public void handleInternalRequest(InternalRequest r) {
-        // check if request if valid
-        // if valid: add request to stoplist depending on the current level, the request level and status.
+        if (this.isRequestValid(r)) {
+            if (currentLevel == r.level) {
+                status = Status.Idle;
+            }
+            else if (currentLevel < r.level) {
+                upStops.add(r);
+                if (status == Status.Idle) {
+                    status = Status.Up;
+                    run();
+                }
+            }
+            else {
+                downStops.add(r);
+                if (status == Status.Idle) {
+                    status = Status.Down;
+                    run();
+                }
+            }
+        }
 
 
     }
 
+    //control the movement of the elevator based on stoplists
+    //have to use opengate and closegate
+    //change status to idle in the end
+    //report as it moves from floor to floor
     public void run(){
-        //control the movement of the elevator based on stoplists
-        //have to use opengate and closegate
-        //change status to idle in the end
+        while (upStops.size() != 0 && downStops.size() != 0){
+            if ( status == Status.Up) {
+                while (upStops.size() != 0) {
+                    Request nextRequest = upStops.poll();
+                    System.out.println("The elevator moves from " + currentLevel + "floor to" + nextRequest.level + " floor.");
+                    openGate();
+                    currentLevel = nextRequest.level;
+                    closeGate();
+                }
+            }
+            else if (status == Status.Down) {
+                while (downStops.size() != 0) {
+                    Request nextRequest = downStops.poll();
+                    System.out.println("The elevator moves from " + currentLevel + "floor to" + nextRequest.level + " floor.");
+                    openGate();
+                    currentLevel = nextRequest.level;
+                    closeGate();
+                }
+            }
+        }
+        status = Status.Idle;
+    }
 
+    private void setMaxWeight(int maxWeight) {
+        this.MaxWeight = maxWeight;
     }
 
     public void openGate(){
@@ -66,7 +111,12 @@ public class Elevator {
     }
     // handle invalidreuqestion
     private boolean isRequestValid(InternalRequest r) {
+        if (r.level > floors || r.level < 1) {
+            System.out.println("The input is invalid: The level has to between 1 and " + floors);
+            return false;
+        }
 
+        return true;
     }
 
 }
