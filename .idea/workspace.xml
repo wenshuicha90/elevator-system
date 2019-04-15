@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3224e23-f4a2-416f-b4fa-6eb50d7cc75f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/src/Elevator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Elevator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/ElevatorButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/ElevatorButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/ElevatorSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/ElevatorSystem.java" afterDir="false" />
-    </list>
+    <list default="true" id="a3224e23-f4a2-416f-b4fa-6eb50d7cc75f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,10 +40,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/src/ElevatorSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
+            <state relative-caret-position="1590">
               <caret line="106" column="32" lean-forward="true" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -138,7 +134,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/ExternalRequest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -254,7 +250,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555306923993" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555306925220" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -282,12 +278,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555299697303</updated>
-      <workItem from="1555299700704" duration="7152000" />
+      <workItem from="1555299700704" duration="7350000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7152000" />
+    <option name="totallyTimeSpent" value="7350000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="809" extended-state="0" />
@@ -345,18 +341,6 @@
             <element signature="e#82#83#0" expanded="true" />
             <element signature="e#111#112#0" expanded="true" />
             <element signature="e#137#138#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/ElevatorSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="106" column="32" lean-forward="true" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-            <element signature="e#718#719#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -440,6 +424,18 @@
             <element signature="e#332#333#0" expanded="true" />
             <element signature="e#381#382#0" expanded="true" />
             <element signature="e#402#403#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/ElevatorSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1590">
+          <caret line="106" column="32" lean-forward="true" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
           </folding>
         </state>
       </provider>
