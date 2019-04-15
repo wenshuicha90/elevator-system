@@ -25,7 +25,7 @@ public class Elevator {
         }
     }
 
-    //external request: up and down. request level lower or higher?
+    //external request: up and down. request level: lower or higher?
 
     public void handleExternalRequest(ExternalRequest r) {
         if (r.getDirection() == Direction.Up){

@@ -52,8 +52,51 @@ public class ElevatorSystem {
                     idles.add(curElevator);
                 }
             }
+
+            else {
+                if (curElevator.getDirection() == Direction.Up) {
+                    ups.add(curElevator);
+                }
+                else {
+                    downs.add(curElevator);
+                }
+            }
         }
 
+        if (r.getDirection() == Direction.Up) {
+            for (int i = 0; i < ups.size(); i ++) {
+                if (ups.get(i).getCurrentLevel() <= r.level) {
+                    ups.get(i).handleExternalRequest(r);
+                    return true;
+                }
+            }
+        }
+
+
+        if (r.getDirection() == Direction.Down) {
+            for (int i = 0; i < downs.size(); i ++) {
+                if (ups.get(i).getCurrentLevel() <= r.level) {
+                    ups.get(i).handleExternalRequest(r);
+                    return true;
+                }
+            }
+        }
+
+
+        if (idles.size() > 0) {
+            Integer minDist = Integer.MAX_VALUE;
+            Elevator closestElevator = elevators.get(0);
+            for (int i = 0; i < idles.size(); i ++) {
+                Integer curDist = Math.abs(idles.get(i).getCurrentLevel() - r.level);
+                if (curDist < minDist) {
+                    minDist = curDist;
+                    closestElevator = idles.get(i);
+                }
+            }
+            closestElevator.handleExternalRequest(r);
+            return true;
+        }
+        return false;
     }
 
 
@@ -64,7 +107,6 @@ public class ElevatorSystem {
             if (elevators.get(i).getTrips() < 101) {
                 usable.add(elevators.get(i));
             }
-
         }
         elevators = usable;
     }
